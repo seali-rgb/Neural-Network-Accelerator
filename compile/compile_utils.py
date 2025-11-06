@@ -5,15 +5,16 @@ from torch.nn.functional import conv2d, pad, max_pool2d, upsample, interpolate
 import cv2
 import os
 
-label_dict = ["人", "自行车", "汽车", "摩托车", "飞机", "巴士", "火车", "卡车", "船", "红绿灯",
-              "消防栓", "停止标", "停车表", "长椅", "鸟", "猫", "狗", "马", "羊", "牛",
-              "大象", "熊", "斑马", "长颈鹿", "背包", "雨伞", "手提包", "领带", "行李箱", "飞盘",
-              "滑雪板", "滑雪板", "运动球", "风筝", "棒球棒", "棒球手", "滑板", "冲浪板",
-              "网球拍", "瓶子", "红酒杯", "杯子", "叉子", "刀", "勺子", "碗", "香蕉", "苹果",
-              "三明治", "橙子", "西兰花", "胡萝卜", "热狗", "披萨", "甜甜圈", "蛋糕", "椅子", "沙发",
-              "盆栽植", "床", "餐桌", "马桶", "电视", "笔记本", "鼠标", "遥控器", "键盘",
-              "手机", "微波炉", "烤箱", "面包机", "水槽", "冰箱", "书", "时钟", "花瓶", "剪刀",
-              "泰迪熊", "吹风机", "牙刷"]
+label_dict = ["person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
+              "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow",
+              "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee",
+              "ski", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard",
+              "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple",
+              "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch",
+              "potted plant", "bed", "dining table", "toilet", "television", "laptop", "mouse", "remote control", "keyboard",
+              "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors",
+              "teddy bear", "hair dryer", "toothbrush"]
+              
 
 VisualMap = {"order": "ORDER",
              "feature_input_base_addr": "FIBA",
